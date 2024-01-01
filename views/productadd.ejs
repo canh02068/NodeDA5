@@ -1,0 +1,88 @@
+<%- include('header') %>
+  <!-- =============================================== -->
+  <%- include('aside') %>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Thêm mới sản phẩm
+      </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <!-- Default box -->
+      <div class="box">
+        <div class="row">
+          <div class="col-md-4">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="">SẢN PHẢM</label>                                  
+                </div>
+                <div class="form-group">
+                  <label for="">Loại hàng</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="loaihangid" >
+                </div>
+                <div class="form-group">
+                  <label for="">Tên sản phẩm</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="tensanpham " >
+                </div>
+                <div class="form-group">
+                  <label for="">ID Nhà cung cấp</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="nhaccid" >
+                </div>
+                <div class="form-group">
+                  <label for="">Giá bán</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="giaban" >
+                </div>
+                <div class="form-group">
+                  <label for="">Số lượng</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="soluongton" >
+                </div>
+                <div class="form-group">
+                  <label for="">Mô tả</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="mota" >
+                </div>
+                <div class="form-group">
+                  <label for="">Ảnh</label>
+                  <input type="file" onchange="readURL(this)" class="form-control" placeholder="Nhập" name="anhsanpham" >
+                </div>
+              </div>
+              <div class="box-footer">
+                <a href="/sanpham" class="btn btn-default">Quay lại</a>
+                <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-save"></i> Lưu lại</button>
+              </div>
+            </form>
+            
+          </div>
+
+          <div class="col-md-4">
+            <a href="" class="thumbnail">
+              <img id="pro-img" src="" alt="">
+            </a>
+          </div>
+
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include('footer') %>
+
+<script>
+  function readURL(input) {
+    if (input.files && input.files[0]){
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#pro-img').attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>

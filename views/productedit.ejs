@@ -1,0 +1,65 @@
+<%- include('header') %>
+  <!-- =============================================== -->
+  <%- include('aside') %>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Sửa sản phẩm
+      </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <!-- Default box -->
+      <div class="box">
+        <div class="row">
+          <div class="col-md-4">
+            <form action="" method="POST" role="form">
+              <input type="hidden" name="anhsanpham" value="<%= sp.anhsanpham %>">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="">ID Loại hàng</label>                                  
+                  <input type="text" class="form-control" placeholder="Nhập" name="loaihangid"  value="<%= sp.loaihangid %>">
+                </div>
+                <div class="form-group">
+                  <label for="">Tên sản phẩm</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="tensanpham" value="<%= sp.tensanpham %>">
+                </div>
+                <div class="form-group">
+                  <label for="">ID Nhà cung cấp</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="nhaccid" value="<%= sp.nhaccid %>">
+                </div>
+                <div class="form-group">
+                  <label for="">Giá bán</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="giaban" value="<%= sp.giaban %>">
+                </div>
+                <div class="form-group">
+                  <label for="">Số lượng</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="soluongton" value="<%= sp.soluongton %>">
+                </div>
+                <div class="form-group">
+                  <label for="">Mô tả</label>
+                  <input type="text" class="form-control" placeholder="Nhập" name="mota" value="<%= sp.mota %>">
+                </div>
+                <div class="form-group">
+                  <label for="">Ảnh</label>
+                  <input type="file" onchange="readURL(this)" class="form-control" placeholder="Nhập" name="anhsanpham"value=" <%= sp.anhsanpham %>" >
+                </div>
+              </div>
+              <div class="box-footer">
+                <a href="/sanpham" class="btn btn-default">Quay lại</a>
+                <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-save"></i> Lưu lại</button>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include('footer') %>
